@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+
+}
+
+.language-btn {
+    float: right;
+}
+
+.head {
+    margin-top: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+img {
+    width: 70%;
+}
