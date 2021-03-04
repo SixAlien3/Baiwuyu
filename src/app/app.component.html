@@ -1,8 +1,11 @@
-<div class="head">
-    <div class="language-btn"><button type="button" class="btn btn-link">中文</button></div>
-    <div class="title">
-        <img src="../assets/logo.png">
+<div class="bodyclass">
+    <div class="header">
+        <div class="language-btn"><button type="button" class="btn btn-link">中文</button></div>
+        <div class="title">
+            <img src="../assets/logo.png">
+        </div>
     </div>
     <router-outlet></router-outlet>
+    <img class="float" [routerLink]="['/menu']" src="../assets/menu.png"/>
 </div>
 

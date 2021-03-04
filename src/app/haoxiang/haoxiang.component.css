@@ -15,3 +15,19 @@ p {
     white-space: pre-line;
     font-size: 6mm;
 }
+
+.homepage_btn {
+    margin-top: 30px;
+}
+
+.homepage_pic {
+    margin-top: 60px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label_list {
+    margin-top: 40px;
+}

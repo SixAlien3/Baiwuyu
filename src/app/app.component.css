@@ -6,7 +6,7 @@
     float: right;
 }
 
-.head {
+.bodyclass {
     margin-top: 15px;
     margin-left: 10%;
     margin-right: 10%;
@@ -14,4 +14,12 @@
 
 img {
     width: 70%;
+}
+
+.float {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 1.5em;
+    height: 1.5em;
 }

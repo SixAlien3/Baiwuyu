@@ -1,0 +1,45 @@
+<div>
+    <p>{{form_text}}</p>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="emailInput" class="form-label">Email
+                <input type="email" class="form-control" id="emailInput" placeholder="enter email" [(ngModel)]="user.email">
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="usernameInput" class="form-label">Username
+                <input type="text" class="form-control" id="usernameInput" [(ngModel)]="user.username">
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="platformInput" class="form-label">Platform
+                <input type="text" class="form-control" id="platformInput" [(ngModel)]="user.platform">
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="dateOfRegisterInput" class="form-label">Date of Register
+                <input type="date" class="form-control" id="dateOfRegisterInput" [(ngModel)]="user.dataOfRegister">
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="dateOfDeathInput" class="form-label">Date of Death
+                <input type="date" class="form-control" id="dateOfDeathInput" [(ngModel)]="user.dataOfDeath">
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="causeOfDeathInput" class="form-label">Cause of Death
+                <input type="text" class="form-control" id="causeOfDeathInput" [(ngModel)]="user.causeOfDeath">
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="obituaryInput" class="form-label">Obituary
+                <textarea class="form-control" id="obituaryInput" [(ngModel)]="user.obituary"></textarea>
+            </label>
+        </div>
+        <div>
+            <p>{{submit_text}}</p>
+        </div>
+        <button type="submit" [disabled]="!myForm.valid" class="btn btn-light">Submit</button>
+    </form>
+</div>
+ 
