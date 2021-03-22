@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { Detail } from '../detail';
 
 @Component({
   selector: 'app-submitform',
@@ -13,19 +14,21 @@ export class SubmitformComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  user = {
-    email:"",
-    username:"",
-    platform:"",
-    dataOfRegister:null,
-    dataOfDeath:null,
-    causeOfDeath:"",
-    obituary:""
-  };
+  user : Detail = new Detail();
+  useremail = "";
 
-  form_text = "If you want to leave an obituary, a \ntrace of your late virtual avatar, \nplease complete and submit the \nfollowing form. We will post your \nobituary as soon as we get your \ninformation, and will notify you \nthrough email.";
-  submit_text = "*Your contact information will only \nbe used to contact you on topics \nconcerning your obituary, including \nthe posting of your obituary and \nmissing information of your obituary. \nThe content of your obituary will \nonly be used in this project, but not \nlimited to this website. For details, \nplease reference the \"About\" page.\n"
+  form_text = "If you want to leave an obituary, a trace of your late virtual avatar, please complete and submit the following form. We will post your obituary and generate your unique relic as soon as we get your information, and will notify you through email when it's done.";
+  submit_text = "*Your contact information will only be used to contact you on topics concerning your obituary, including the posting of your obituary and missing information of your obituary. The content of your obituary will only be used in this project, but not limited to this website. For details,  please reference the \"About\" page.";
+  
   onSubmit() {
     alert("submited");
+    this.saveJson(this.user);
+  }
+
+  saveJson(content: Detail) {
+    var a = document.createElement('a');
+    a.setAttribute('href', 'data:text/plain;charset=utf-u,'+encodeURIComponent(JSON.stringify(content)));
+    a.setAttribute('download', content.username+'_'+Date.now().toString());
+    a.click();
   }
 }

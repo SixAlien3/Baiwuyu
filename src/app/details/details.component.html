@@ -1,9 +1,16 @@
 <div>
-    <img src="assets/photo.png">
+    <!-- <img src=" assets/photo.png">
     <h4>好想打麻将鸦</h4>
     <p>2018 秋 - 2020 秋</p>
     <p>微博</p>
     <p>主动停用</p>
     <p class="stat">伯邑考，呕吐物里有没有你的梦境？</p>
+    <span>pending on blockchain</span> -->
+    <img src={{detail.photo}}>
+    <h4>{{detail.username}}</h4>
+    <p>{{detail.registerDate | date:'shortDate'}} - {{detail.deathDate | date:'shortDate'}}</p>
+    <p>{{detail.platform}}</p>
+    <p>{{detail.cause}}</p>
+    <p class="stat">{{detail.obituary}}</p>
     <span>pending on blockchain</span>
 </div>

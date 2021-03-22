@@ -1,10 +1,6 @@
 .pre_text {
-    margin-top: 40px;
+    margin-top: 300px;
     margin-bottom: 70px;
-}
-
-.label_item2 {
-    margin-top: 60px;
 }
 
 img {
@@ -21,7 +17,7 @@ p {
 }
 
 .homepage_pic {
-    margin-top: 60px;
+    margin-top: 150px;
     width: 50%;
     display: block;
     margin-left: auto;
@@ -29,5 +25,13 @@ p {
 }
 
 .label_list {
-    margin-top: 40px;
+    margin-top: 150px;
+}
+
+.label_item {
+    margin-top: 50px;
+}
+
+.sort {
+    margin-top: 150px;
 }

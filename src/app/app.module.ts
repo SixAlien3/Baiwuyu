@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { DetailsComponent } from './details/details.component';
 import { SubmitformComponent } from './submitform/submitform.component';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     AboutComponent,
     DetailsComponent,
-    SubmitformComponent
+    SubmitformComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

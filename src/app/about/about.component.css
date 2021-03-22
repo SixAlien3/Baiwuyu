@@ -1,8 +1,22 @@
 p {
     white-space: pre-line;
     font-size: 6mm;
+    color: grey;
 }
 
 h1 {
-    margin-top: 15%;
+    color: grey;
+}
+
+div {
+    padding-top: 40px;
+}
+
+p:first-of-type {
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: underline;
+    color: grey;
 }

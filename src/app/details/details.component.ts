@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Detail } from '../detail';
 
 @Component({
   selector: 'app-details',
@@ -10,6 +11,9 @@ export class DetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.detail = history.state.data;
   }
+
+  detail: Detail;
 
 }

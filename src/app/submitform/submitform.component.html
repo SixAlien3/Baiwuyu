@@ -1,45 +1,39 @@
 <div>
-    <p>{{form_text}}</p>
+    <div>
+        <p class="formText">{{form_text}}</p>
+    </div>
     <form #myForm="ngForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label for="emailInput" class="form-label">Email
-                <input type="email" class="form-control" id="emailInput" placeholder="enter email" [(ngModel)]="user.email">
-            </label>
+            <label for="emailInput" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="for contact purpose only" [(ngModel)]="useremail">
         </div>
         <div class="form-group">
-            <label for="usernameInput" class="form-label">Username
-                <input type="text" class="form-control" id="usernameInput" [(ngModel)]="user.username">
-            </label>
+            <label for="usernameInput" class="form-label">Username</label>
+                <input type="text" class="form-control" name="username" placeholder="the name of your late avatar" [(ngModel)]="user.username">
         </div>
         <div class="form-group">
-            <label for="platformInput" class="form-label">Platform
-                <input type="text" class="form-control" id="platformInput" [(ngModel)]="user.platform">
-            </label>
+            <label for="platformInput" class="form-label">Platform</label>
+                <input type="text" class="form-control" name="platform" placeholder="where your avatar lived" [(ngModel)]="user.platform">
         </div>
         <div class="form-group">
-            <label for="dateOfRegisterInput" class="form-label">Date of Register
-                <input type="date" class="form-control" id="dateOfRegisterInput" [(ngModel)]="user.dataOfRegister">
-            </label>
+            <label for="dateOfRegisterInput" class="form-label">Date of Register</label>
+                <input type="date" class="form-control" name="dateOfRegister" [(ngModel)]="user.registerDate">
         </div>
         <div class="form-group">
-            <label for="dateOfDeathInput" class="form-label">Date of Death
-                <input type="date" class="form-control" id="dateOfDeathInput" [(ngModel)]="user.dataOfDeath">
-            </label>
+            <label for="dateOfDeathInput" class="form-label">Date of Death</label>
+                <input type="date" class="form-control" name="dateOfDeath" [(ngModel)]="user.deathDate">
         </div>
         <div class="form-group">
-            <label for="causeOfDeathInput" class="form-label">Cause of Death
-                <input type="text" class="form-control" id="causeOfDeathInput" [(ngModel)]="user.causeOfDeath">
-            </label>
+            <label for="causeOfDeathInput" class="form-label">Cause of Death</label>
+                <input type="text" class="form-control" name="causeOfDeath" placeholder="banned, delete it myself, etc." [(ngModel)]="user.cause">
         </div>
         <div class="form-group">
-            <label for="obituaryInput" class="form-label">Obituary
-                <textarea class="form-control" id="obituaryInput" [(ngModel)]="user.obituary"></textarea>
-            </label>
+            <label for="obituaryInput" class="form-label">Obituary</label>
+                <textarea class="form-control" name="obituary" rows="5" [(ngModel)]="user.obituary" placeholder="Why did you register it in the first place?&#013;Which period of your life did it witness?&#013;One most memorable event it carried?&#013;What triggered its death?"></textarea>
         </div>
         <div>
-            <p>{{submit_text}}</p>
+            <p class="submitText">{{submit_text}}</p>
         </div>
         <button type="submit" [disabled]="!myForm.valid" class="btn btn-light">Submit</button>
     </form>
-</div>
- 
+</div> 

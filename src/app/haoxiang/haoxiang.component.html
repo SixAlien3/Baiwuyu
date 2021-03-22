@@ -1,33 +1,55 @@
 <div class="pre_text">
     <p>{{pre_text}}</p>
+    <p>{{pre_text_pg2}}</p>
 </div>
 <div class="homepage_btn">
     <a class="btn btn-link" routerLink="/submitform" role="button">Submit</a>
     <a class="btn btn-link" routerLink="/about" role="button">Learn more</a>
 </div>
 <div class="homepage_pic">
-    <img src="assets/Component 8 – 4.png">
+    <img (click)="showList = !showList" src=" assets/Component 8 – 4.png">
 </div>
-<div class="sort">
-
+<div class="sort" *ngIf="showList">
+Sort:
+    <a [routerLink]="" (click)="sortLatest()">latest</a>
+    <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{causeFilter}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <div *ngFor="let cause of causeList">
+                <button ngbDropdownItem (click)="causeOfDeath(cause)">{{cause}}</button>
+            </div>
+          <!-- <button ngbDropdownItem (click)="causeOfDeath('其他')">其他</button> -->
+          <button ngbDropdownItem (click)="causeOfDeath('')">all</button>
+        </div>
+    </div>
+    <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{platformFilter}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <div *ngFor="let platform of platformList">
+                <button ngbDropdownItem (click)="platformSearch(platform)">{{platform}}</button>
+            </div>
+          <button ngbDropdownItem (click)="platformSearch('')">all</button>
+        </div>
+    </div>
+    <a [routerLink]="" (click)="sortDateOfDeath()">date of death</a>
 </div>
-<div class="label_list">
-    <div class="label_item1">
-        <img routerLink="/details" src="assets/label1.png">
+<div class="label_list" *ngIf="showList">
+    <div class="label_item" *ngFor="let detail of detailList | filter: searchCause : 'cause' : searchPlatform : 'platform'">
+        <img routerLink="/details" [state]="{data: detail}" src={{detail.pic}}>
     </div>
-    <div class="label_item2">
-        <img routerLink="/details" src="assets/label2.png">
+    <!-- <div class="label_item">
+        <img routerLink="/details" src=" assets/label1.png">
     </div>
-    <div class="label_item1">
-        <img routerLink="/details" src="assets/label1.png">
+    <div class="label_item">
+        <img routerLink="/details" src=" assets/label1.png">
     </div>
-    <div class="label_item2">
-        <img routerLink="/details" src="assets/label2.png">
+    <div class="label_item">
+        <img routerLink="/details" src=" assets/label1.png">
     </div>
-    <div class="label_item1">
-        <img routerLink="/details" src="assets/label1.png">
+    <div class="label_item">
+        <img routerLink="/details" src=" assets/label1.png">
     </div>
-    <div class="label_item2">
-        <img routerLink="/details" src="assets/label2.png">
-    </div>
+    <div class="label_item">
+        <img routerLink="/details" src=" assets/label1.png">
+    </div> -->
 </div>

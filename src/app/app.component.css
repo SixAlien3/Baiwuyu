@@ -2,18 +2,29 @@
 
 }
 
-.language-btn {
-    float: right;
-}
-
 .bodyclass {
-    margin-top: 15px;
     margin-left: 10%;
     margin-right: 10%;
 }
 
+.header {
+    position: fixed;
+    right: 10%;
+    left: 10%;
+    top: 15px;
+}
+
+.language-btn {
+    float: right;
+}
+
 img {
-    width: 70%;
+    width: 80%;
+}
+
+.content {
+    margin-top: 150px;
+    margin-bottom: 50px;
 }
 
 .float {
@@ -23,3 +34,4 @@ img {
     width: 1.5em;
     height: 1.5em;
 }
+
