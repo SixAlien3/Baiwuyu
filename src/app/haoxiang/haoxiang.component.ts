@@ -26,9 +26,9 @@ export class HaoxiangComponent implements OnInit {
       deathDate: new Date("2020/10/01"),
       cause: "主动停用",
       obituary: "伯邑考，呕吐物里有没有你的梦境？",
-      pic: " assets/label1.png",
+      pic: "../../assets/label1.png",
       clickDate: new Date(),
-      photo: " assets/photo.png"
+      photo: "../../assets/photo.png"
     },
     {
       username: "username2",
@@ -38,9 +38,9 @@ export class HaoxiangComponent implements OnInit {
       deathDate: new Date("2020/10/02"),
       cause: "其他",
       obituary: "obituary2",
-      pic: " assets/label1.png",
+      pic: "../../assets/label1.png",
       clickDate: new Date(),
-      photo: " assets/photo.png"
+      photo: "../../assets/photo.png"
     },
     {
       username: "username3",
@@ -49,9 +49,9 @@ export class HaoxiangComponent implements OnInit {
       deathDate: new Date("2020/10/05"),
       cause: "其他",
       obituary: "obituary3",
-      pic: " assets/label1.png",
+      pic: "../../assets/label1.png",
       clickDate: new Date(),
-      photo: " assets/photo.png"
+      photo: "../../assets/photo.png"
     },
     {
       username: "username4",
@@ -60,9 +60,9 @@ export class HaoxiangComponent implements OnInit {
       deathDate: new Date("2020/10/04"),
       cause: "主动停用",
       obituary: "obituary4",
-      pic: " assets/label1.png",
+      pic: "../../assets/label1.png",
       clickDate: new Date(),
-      photo: " assets/photo.png"
+      photo: "../../assets/photo.png"
     },
     {
       username: "username5",
@@ -71,9 +71,9 @@ export class HaoxiangComponent implements OnInit {
       deathDate: new Date("2020/10/10"),
       cause: "主动停用",
       obituary: "obituary5",
-      pic: " assets/label1.png",
+      pic: "../../assets/label1.png",
       clickDate: new Date(),
-      photo: " assets/photo.png"
+      photo: "../../assets/photo.png"
     },
   ];
   

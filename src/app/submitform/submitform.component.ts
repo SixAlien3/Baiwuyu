@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Detail } from '../detail';
+import '../../assets/smtp.js';
+declare let Email: any;
 
 @Component({
   selector: 'app-submitform',
@@ -22,13 +24,23 @@ export class SubmitformComponent implements OnInit {
   
   onSubmit() {
     alert("submited");
-    this.saveJson(this.user);
+    //this.saveJson(this.user);
+    this.sendEmail(JSON.stringify(this.user));
   }
 
-  saveJson(content: Detail) {
-    var a = document.createElement('a');
-    a.setAttribute('href', 'data:text/plain;charset=utf-u,'+encodeURIComponent(JSON.stringify(content)));
-    a.setAttribute('download', content.username+'_'+Date.now().toString());
-    a.click();
+  //提交失败的提醒
+  sendEmail(content: string) {
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "qiu963258741@gmail.com",
+      Password: "14B706AA41FE9CCCEF3EF374267E02712800",
+      To: "qzhu5@saic.edu",
+      From: "qiu963258741@gmail.com",
+      Subject: "send email for jar",
+      Body: content,
+    })
+    .then(function () {
+      alert("sent successfually")
+    }); 
   }
 }
