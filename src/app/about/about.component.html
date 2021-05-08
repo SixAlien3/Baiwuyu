@@ -1,9 +1,26 @@
-<div>
-    <h1>About</h1>
-    <p>"Story of a hundred things (百物语) could be considered an obituary service for your virtual avatars based on encryption and <a href="">decentralization technology</a>."</p>
-    <p>{{about_text2}}</p>
-    <p>{{about_text3}}</p>
-    <p>"See the project on <a href="">Ethereum</a>."</p>
-    <p>{{about_text5}}</p>
+<div class="header">
+    <img class="hh" src="../../assets/menu_icon.png" (click)="goMenu()">
+    <img class="h_img" src="../../assets/logo_color.png">
+    <div class="media_link">
+        <a href="https://www.instagram.com/baiwuyu_/"><img class="first_img" src="../../assets/icon_ins.png"></a>
+        <a href="https://twitter.com/baiwuyu_"><img class="x" src="../../assets/icon_twi.png"></a>
+        <a href="https://weibo.com/p/1005056142774976/home?from=page_100505&mod=TAB&is_all=1#place"><img class="x" src="../../assets/icon_weibo.png"></a>
+        <a><img class="x" src="../../assets/icon_douban.png"></a>
+    </div>    
+    <a routerLink="/about" (click)="language()">{{languageM}}</a>
+    <a class="pc_header" routerLink="/about">{{about}}</a>
+    <a class="pc_header" routerLink="/submitform">{{submission}}</a>
+    <a class="pc_header" routerLink="/">{{home}}</a>
+    
+</div>
+<div class="background_wrapper">
+    <h1>{{about}}</h1>
+    <div class="about_text">
+        <p><span class="ita">{{hundredStories}} </span>{{text_1}}</p>
+        <p>{{text_2}}<a href="https://rinkeby.etherscan.io/token/0x6b40d3e1e6779c8615b051f16ffae794110b1db7">{{text_3}}</a>{{text_4}}</p>
+        <p>{{about_text3}}</p>
+        <p>{{about_text5}}</p>
+        <p><a href="https://rinkeby.etherscan.io/token/0x6b40d3e1e6779c8615b051f16ffae794110b1db7">{{about_text6}}</a></p>
+    </div>
 </div>
 

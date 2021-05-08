@@ -1,16 +1,30 @@
-<div>
-    <!-- <img src="../../assets/photo.png">
-    <h4>好想打麻将鸦</h4>
-    <p>2018 秋 - 2020 秋</p>
-    <p>微博</p>
-    <p>主动停用</p>
-    <p class="stat">伯邑考，呕吐物里有没有你的梦境？</p>
-    <span>pending on blockchain</span> -->
-    <img src={{detail.photo}}>
-    <h4>{{detail.username}}</h4>
-    <p>{{detail.registerDate | date:'shortDate'}} - {{detail.deathDate | date:'shortDate'}}</p>
-    <p>{{detail.platform}}</p>
-    <p>{{detail.cause}}</p>
-    <p class="stat">{{detail.obituary}}</p>
-    <span>pending on blockchain</span>
+<div class="header">
+    <img class="hh" src="../../assets/menu_icon.png" (click)="goMenu()">
+    <img class="h_img" src="../../assets/logo_color.png">
+    <!-- <a (click)="language()">中文</a> -->
+    <div class="media_link">
+        <a href="https://www.instagram.com/baiwuyu_/"><img class="first_img" src="../../assets/icon_ins.png"></a>
+        <a href="https://twitter.com/baiwuyu_"><img class="x" src="../../assets/icon_twi.png"></a>
+        <a href="https://weibo.com/p/1005056142774976/home?from=page_100505&mod=TAB&is_all=1#place"><img class="x" src="../../assets/icon_weibo.png"></a>
+        <a><img class="x" src="../../assets/icon_douban.png"></a>
+    </div>
+    <button type="button" class="btn btn-link"(click)="language()">{{languageM}}</button>
+    <a class="pc_header" routerLink="/about">{{about}}</a>
+    <a class="pc_header" routerLink="/submitform">{{submission}}</a>
+    <a class="pc_header" routerLink="/">{{home}}</a>
+</div>
+<div class="background_wrapper">
+    <div id="sketch-parent">
+        <!-- <img class="fireball" src={{detail.photo}}> -->
+    </div>
+    <div class="d_content">
+        <h4>{{detail.username}}</h4>
+        <!-- <p class="date">{{detail.registerDate | date:'shortDate'}} - {{detail.deathDate | date:'shortDate'}}</p> -->
+        <p class="date">{{detail.registerDateS}} - {{detail.deathDateS}}</p>
+        <p class="platform">{{detail.platform}}</p>
+        <p class="cause">{{detail.cause}}</p>
+        <p class="obituary">{{detail.obituary}}</p>
+        <span><a href="{{detail.blockchain}}">{{text1}}</a></span>
+    </div>
+    <div style="clear: both;"></div>
 </div>

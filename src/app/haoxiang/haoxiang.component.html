@@ -1,55 +1,54 @@
-<div class="pre_text">
-    <p>{{pre_text}}</p>
-    <p>{{pre_text_pg2}}</p>
-</div>
-<div class="homepage_btn">
-    <a class="btn btn-link" routerLink="/submitform" role="button">Submit</a>
-    <a class="btn btn-link" routerLink="/about" role="button">Learn more</a>
-</div>
-<div class="homepage_pic">
-    <img (click)="showList = !showList" src="../../assets/Component 8 – 4.png">
-</div>
-<div class="sort" *ngIf="showList">
-Sort:
-    <a [routerLink]="" (click)="sortLatest()">latest</a>
-    <div ngbDropdown class="d-inline-block">
-        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{causeFilter}}</button>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <div *ngFor="let cause of causeList">
-                <button ngbDropdownItem (click)="causeOfDeath(cause)">{{cause}}</button>
+<div class="background_wrapper">
+    <div class="header_img">
+        <img src="../../assets/logo_color.png">
+    </div>
+    <div class="pre_text">
+        <p>{{pre_text}}</p>
+        <p>{{pre_text_pg2}}</p>
+    </div>
+    <div class="homepage_btn">
+        <a routerLink="/submitform">{{submitM}}</a>
+        <a routerLink="/about">{{learnMoreM}}</a>
+        <a routerLink="" (click)="language()">{{languageM}}</a>
+    </div>
+    <div class="homepage_pic">
+        <img src="../../assets/up.png">
+    </div>
+    <div id="sketch-parent"></div>
+    <div class="sort">
+        <div class="sort_filter">
+            <a>{{sortM}}:</a>
+            <a class="l" [routerLink]="" (click)="sortLatest()">{{latestM}}</a>
+            <a class="l" [routerLink]="" (click)="sortDateOfDeath()">{{dateOfDeathM}}</a>
+        </div>
+        <div class="sort_filter">
+            <a>{{filterM}}:</a>
+            <div ngbDropdown class="d-inline-block">
+                <a id="dropdownBasic1" ngbDropdownToggle>{{platformFilter}}</a>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <div *ngFor="let platform of platformList">
+                        <a ngbDropdownItem (click)="platformSearch(platform)">{{platform}}</a>
+                    </div>
+                <a ngbDropdownItem (click)="platformSearch('')">all</a>
+                </div>
             </div>
-          <!-- <button ngbDropdownItem (click)="causeOfDeath('其他')">其他</button> -->
-          <button ngbDropdownItem (click)="causeOfDeath('')">all</button>
+            <div ngbDropdown class="d-inline-block">
+                <a id="dropdownBasic1" ngbDropdownToggle>{{causeFilter}}</a>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <div *ngFor="let cause of causeList">
+                        <a ngbDropdownItem (click)="causeOfDeath(cause)">{{cause}}</a>
+                    </div>
+                <!-- <button ngbDropdownItem (click)="causeOfDeath('其他')">其他</button> -->
+                <a ngbDropdownItem (click)="causeOfDeath('')">all</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div ngbDropdown class="d-inline-block">
-        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{platformFilter}}</button>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <div *ngFor="let platform of platformList">
-                <button ngbDropdownItem (click)="platformSearch(platform)">{{platform}}</button>
+    <div class="label_list">
+        <!-- <div class="label_item" *ngFor="let detail of detailList | filter: searchCause : 'causeS' : searchPlatform : 'platform'"> -->
+        <div class="label_item" *ngFor="let detail of detailList">
+            <div id="sketch-parent-{{detail.id}}" [routerLink]="['/details', detail.id]">
             </div>
-          <button ngbDropdownItem (click)="platformSearch('')">all</button>
         </div>
     </div>
-    <a [routerLink]="" (click)="sortDateOfDeath()">date of death</a>
-</div>
-<div class="label_list" *ngIf="showList">
-    <div class="label_item" *ngFor="let detail of detailList | filter: searchCause : 'cause' : searchPlatform : 'platform'">
-        <img routerLink="/details" [state]="{data: detail}" src={{detail.pic}}>
-    </div>
-    <!-- <div class="label_item">
-        <img routerLink="/details" src="../../assets/label1.png">
-    </div>
-    <div class="label_item">
-        <img routerLink="/details" src="../../assets/label1.png">
-    </div>
-    <div class="label_item">
-        <img routerLink="/details" src="../../assets/label1.png">
-    </div>
-    <div class="label_item">
-        <img routerLink="/details" src="../../assets/label1.png">
-    </div>
-    <div class="label_item">
-        <img routerLink="/details" src="../../assets/label1.png">
-    </div> -->
 </div>

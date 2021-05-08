@@ -1,39 +1,59 @@
-<div>
-    <div>
+<div class="header">
+    <img class="hh" src="../../assets/menu_icon.png" (click)="goMenu()">
+    <img class="h_img" src="../../assets/logo_color.png">
+    <div class="media_link">
+        <a href="https://www.instagram.com/baiwuyu_/"><img class="first_img" src="../../assets/icon_ins.png"></a>
+        <a href="https://twitter.com/baiwuyu_"><img class="x" src="../../assets/icon_twi.png"></a>
+        <a href="https://weibo.com/p/1005056142774976/home?from=page_100505&mod=TAB&is_all=1#place"><img class="x" src="../../assets/icon_weibo.png"></a>
+        <a><img class="x" src="../../assets/icon_douban.png"></a>
+    </div> 
+    <a routerLink="/submitform" (click)="language()">{{languageM}}</a>
+    <a class="pc_header" routerLink="/about">{{about}}</a>
+    <a class="pc_header" routerLink="/submitform">{{submission}}</a>
+    <a class="pc_header" routerLink="/">{{home}}</a>
+</div>
+<div class="background_wrapper">
+    <div class="d_text">
         <p class="formText">{{form_text}}</p>
     </div>
-    <form #myForm="ngForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label for="emailInput" class="form-label">Email</label>
-                <input type="email" class="form-control" name="email" placeholder="for contact purpose only" [(ngModel)]="useremail">
-        </div>
-        <div class="form-group">
-            <label for="usernameInput" class="form-label">Username</label>
-                <input type="text" class="form-control" name="username" placeholder="the name of your late avatar" [(ngModel)]="user.username">
-        </div>
-        <div class="form-group">
-            <label for="platformInput" class="form-label">Platform</label>
-                <input type="text" class="form-control" name="platform" placeholder="where your avatar lived" [(ngModel)]="user.platform">
-        </div>
-        <div class="form-group">
-            <label for="dateOfRegisterInput" class="form-label">Date of Register</label>
-                <input type="date" class="form-control" name="dateOfRegister" [(ngModel)]="user.registerDate">
-        </div>
-        <div class="form-group">
-            <label for="dateOfDeathInput" class="form-label">Date of Death</label>
-                <input type="date" class="form-control" name="dateOfDeath" [(ngModel)]="user.deathDate">
-        </div>
-        <div class="form-group">
-            <label for="causeOfDeathInput" class="form-label">Cause of Death</label>
-                <input type="text" class="form-control" name="causeOfDeath" placeholder="banned, delete it myself, etc." [(ngModel)]="user.cause">
-        </div>
-        <div class="form-group">
-            <label for="obituaryInput" class="form-label">Obituary</label>
-                <textarea class="form-control" name="obituary" rows="5" [(ngModel)]="user.obituary" placeholder="Why did you register it in the first place?&#013;Which period of your life did it witness?&#013;One most memorable event it carried?&#013;What triggered its death?"></textarea>
-        </div>
-        <div>
-            <p class="submitText">{{submit_text}}</p>
-        </div>
-        <button type="submit" [disabled]="!myForm.valid" class="btn btn-light">Submit</button>
+    <div class="f_text" >
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+            <div class="form-group">
+                <label for="emailInput" class="form-label">{{email}}</label>
+                    <input type="email" class="form-control" name="email" placeholder="for contact purpose only" [(ngModel)]="useremail">
+            </div>
+            <div class="form-group">
+                <label for="usernameInput" class="form-label">{{username}}</label>
+                    <input type="text" class="form-control" name="username" placeholder="the name of your late avatar" [(ngModel)]="user.username">
+            </div>
+            <div class="form-group">
+                <label for="platformInput" class="form-label">{{platform}}</label>
+                    <input type="text" class="form-control" name="platform" placeholder="where your avatar lived" [(ngModel)]="user.platform">
+            </div>
+            <div class="form-group">
+                <label for="dateOfRegisterInput" class="form-label">{{dateOfRegister}}</label>
+                    <input type="text" class="form-control" name="dateOfRegister" [(ngModel)]="user.registerDate">
+            </div>
+            <div class="form-group">
+                <label for="dateOfDeathInput" class="form-label">{{dateOfDeath}}</label>
+                    <input type="text" class="form-control" name="dateOfDeath" [(ngModel)]="user.deathDate">
+            </div>
+            <div class="form-group">
+                <label for="causeOfDeathInput" class="form-label">{{causeOfDeath}}</label>
+                    <input type="text" class="form-control" name="causeOfDeath" placeholder="banned, delete it myself, etc." [(ngModel)]="user.cause">
+            </div>
+            <div class="form-group">
+                <label for="obituaryInput" class="form-label">{{obituary}}</label>
+                    <textarea class="form-control" name="obituary" rows="5" [(ngModel)]="user.obituary" placeholder="Why did you register it in the first place?&#013;Which period of your life did it witness?&#013;One most memorable event it carried?&#013;What triggered its death?"></textarea>
+            </div>
+        <a class="submit_btn" routerLink="/submitform" (click)="onSubmit(myForm)">{{submit}}</a>
     </form>
+    </div>
+    <div class="s_text">
+        <p class="submitText">{{submit_text}}</p>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="alert_d">
+        <alert></alert>
+    </div>
 </div> 

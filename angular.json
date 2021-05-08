@@ -35,7 +35,8 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.js",
-              "src/assets/smtp.js"
+              "src/assets/smtp.js",
+              "node_modules/p5/lib/p5.js"
             ]
           },
           "configurations": {
@@ -57,7 +58,7 @@
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "4mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -128,6 +129,10 @@
               "devServerTarget": "baiwuyu:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

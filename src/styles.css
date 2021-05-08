@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: laGaramondto;
+    src: url(assets/font/EBGaramond-VariableFont_wght.ttf) format("opentype");
+}
+@font-face {
+    font-family: NotoSerifSC;
+    src: url(assets/font/NotoSerifSC-Regular.otf) format("opentype");
+    font-weight: regular;
+}

@@ -1,12 +1,172 @@
-p {
-    white-space: pre-line;
-    font-size: 6mm;
+
+.header {
+    /* background-image: url('../../assets/header.png'); */
+    /* background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    height: 120px; */
+    background-color: #E7FFE6;
+    font-family: NotoSerifSC;
+    font-size: 20pt;
+
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    background-size: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1001;  
 }
 
-.submitText {
-    color: grey;
+.h_img {
+    margin-top: 15px;
+    width: 70px;
+    margin-left: 20%;
+}
+
+.hh {
+    width: 30px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.header a {
+    text-decoration: underline;
+    float: right;
+    margin-right: 50px;
+    margin-top: 15px;
+    color:  #0FCC00;
+}
+
+.background_wrapper {
+    background-image: url('../../assets/background2.png');
+    background-attachment: fixed;
+    background-size: 100%;
+    color:  #E7FFE6;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    margin-top: 70px;
+}
+
+p {
+    white-space: pre-line;
 }
 
 .formText {
-    padding-top: 50px;
+    font-family: NotoSerifSC;
+    font-size: 20pt;
+    color:  #E7FFE6;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+label {
+    font-family: NotoSerifSC;
+    font-size: 18pt;
+    color:  #E7FFE6;
+}
+
+input{
+    border-color: #0FCC00;
+    border-width: 3px;
+    height: 45px;
+    background-color: #E7FFE6;
+    font-family: NotoSerifSC;
+    font-size: 14pt;
+}
+
+textarea {
+    border-color: #0FCC00;
+    border-width: 3px;
+    background-color: #E7FFE6;
+    height: 300px;
+}
+
+.submitText {
+    font-family: NotoSerifSC;
+    font-size: 14pt;
+    color:  #E7FFE6;
+    margin-top: 20px;
+}
+
+.submit_btn {
+    font-size: 18pt;
+    background-color:  #E7FFE6;
+    color:  #0FCC00;
+    text-decoration: underline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.alert_d {
+    margin-bottom: 50px;
+}
+
+.pc_header {
+    display: none;   
+}
+
+.media_link {
+    display: none; 
+}
+@media (min-width: 767px) {
+.hh {
+    display: none;
+}
+
+.h_img {
+    margin-top: 15px;
+    width: 70px;
+    margin-left: 2%;
+}
+
+.header button {
+    float: right;
+    margin-top: 10px;
+    color:  #0FCC00;
+    font-size: 20pt;
+}
+
+.background_wrapper {
+    background-image: url("../../assets/pc_bk.png");
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 100px;
+    height: 140vh;
+
+}
+
+.d_text {
+    float: left;
+    width: 50%;
+    margin-top: 200px;
+    padding-right: 10%;
+}
+
+.f_text {
+    float: right;
+    width: 50%;
+}
+
+.s_text {
+    float: left;
+    width: 50%;
+    padding-right: 10%;
+}
+
+.pc_header {
+    display: inline;
+}
+
+.media_link {
+    display: inline;
+    float: right;
+}
+
+.media_link img {
+    width: 30px;
+}
+
 }

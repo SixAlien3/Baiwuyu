@@ -1,30 +1,29 @@
-<div>
-    <div class="menu_word">
-        <a class="btn btn-link" routerLink="" role="button">Home</a>
+<div class="background_wrapper_menu">
+    <div class="close_tag">
+        <img src="../../assets/close.png" (click)="goBack()">
+    </div>
+    <div class="menu_home">
+        <a class="btn btn-link" routerLink="">{{home}}</a>
     </div>
     <div class="menu_dash">
-        <img src="../../assets/menuLine.png">
+        <img src="../../assets/dash.png">
     </div>
     <div class="menu_word">
-        <a class="btn btn-link" routerLink="/submitform" role="button">Submit</a>
+        <a class="btn btn-link" routerLink="/submitform">{{submit}}</a>
     </div>
     <div class="menu_dash">
-        <img src="../../assets/menuLine.png">
+        <img src="../../assets/dash.png">
     </div>
     <div class="menu_word">
-        <a class="btn btn-link" routerLink="/about" role="button">About</a>
+        <a class="btn btn-link" routerLink="/about">{{about}}</a>
     </div>
-    <div class="menu_dash">
-        <img src="../../assets/menuLine.png">
+    <div class="media_link">
+        <a href="https://www.instagram.com/baiwuyu_/"><img class="first_img" src="../../assets/ins.png"></a>
+        <a href="https://twitter.com/baiwuyu_"><img class="x" src="../../assets/tweet.png"></a>
+        <a href="https://weibo.com/p/1005056142774976/home?from=page_100505&mod=TAB&is_all=1#place"><img class="x" src="../../assets/weibo.png"></a>
+        <a><img class="x" src="../../assets/douban.png"></a>
     </div>
-</div>
-<div class="media_link">
-    <img class="first_img" src="../../assets/socialMediaLogo.png">
-    <img src="../../assets/socialMediaLogo.png">
-    <img src="../../assets/socialMediaLogo.png">
-    <img src="../../assets/socialMediaLogo.png">
-</div>
-<div class="footer">
-    <button type="button" class="btn btn-link">中文</button>
-    <img src="../../assets/cancelMenu.png" (click)='goBack()'>
+    <div class="homepage_btn">
+        <a routerLink="/menu" (click)="language()">{{languageM}}</a>
+    </div>
 </div>

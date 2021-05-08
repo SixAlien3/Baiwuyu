@@ -12,6 +12,11 @@ import { SubmitformComponent } from './submitform/submitform.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
+import { AlertModule } from './_alert';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -29,6 +34,10 @@ import { FilterPipe } from './filter.pipe';
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    AlertModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

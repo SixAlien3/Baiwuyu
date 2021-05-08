@@ -1,37 +1,21 @@
-@media (max-width: 767px) {
-
-}
-
-.bodyclass {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.header {
-    position: fixed;
-    right: 10%;
-    left: 10%;
-    top: 15px;
-}
-
-.language-btn {
+@media (max-width: 767px) {}
+/* .language-btn {
     float: right;
 }
 
 img {
     width: 80%;
 }
-
-.content {
-    margin-top: 150px;
-    margin-bottom: 50px;
-}
-
 .float {
     position: fixed;
     bottom: 1rem;
     right: 1rem;
     width: 1.5em;
     height: 1.5em;
-}
+} */
+
+
+
+
+
 

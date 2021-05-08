@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', component: HaoxiangComponent},
   { path: 'menu', component: MenuComponent},
   { path: 'about', component: AboutComponent},
-  { path: 'details', component: DetailsComponent},
+  { path: 'details/:id', component: DetailsComponent},
   { path: 'submitform', component: SubmitformComponent},
 ];
 

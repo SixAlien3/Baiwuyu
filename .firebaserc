@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "hundredstories-62c11": {
+      "hosting": {
+        "baiwuyu": [
+          "hundredstories-62c11"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "staging": "restnodejs-92880"
+  }
+}
