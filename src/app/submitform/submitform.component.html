@@ -17,36 +17,42 @@
         <p class="formText">{{form_text}}</p>
     </div>
     <div class="f_text" >
-        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+        <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" ngNativeValidate>
             <div class="form-group">
                 <label for="emailInput" class="form-label">{{email}}</label>
                     <input type="email" class="form-control" name="email" placeholder="for contact purpose only" [(ngModel)]="useremail">
             </div>
             <div class="form-group">
                 <label for="usernameInput" class="form-label">{{username}}</label>
-                    <input type="text" class="form-control" name="username" placeholder="the name of your late avatar" [(ngModel)]="user.username">
+                    <input type="text" class="form-control" name="username" placeholder="the name of your late avatar" [(ngModel)]="user.username" required>
+                <span ng-show="myForm.username.$error.required" class="help-block">username is required</span>
             </div>
             <div class="form-group">
                 <label for="platformInput" class="form-label">{{platform}}</label>
-                    <input type="text" class="form-control" name="platform" placeholder="where your avatar lived" [(ngModel)]="user.platform">
+                    <input type="text" class="form-control" name="platform" placeholder="where your avatar lived" [(ngModel)]="user.platform" required>
+                <span ng-show="myForm.platform.$error.required" class="help-block">platform is required</span>    
             </div>
             <div class="form-group">
                 <label for="dateOfRegisterInput" class="form-label">{{dateOfRegister}}</label>
-                    <input type="text" class="form-control" name="dateOfRegister" [(ngModel)]="user.registerDate">
+                    <input type="text" class="form-control" name="dateOfRegister" [(ngModel)]="user.registerDate" required>
+                <span ng-show="myForm.dateOfRegister.$error.required" class="help-block">date of register is required</span>        
             </div>
             <div class="form-group">
                 <label for="dateOfDeathInput" class="form-label">{{dateOfDeath}}</label>
-                    <input type="text" class="form-control" name="dateOfDeath" [(ngModel)]="user.deathDate">
+                    <input type="text" class="form-control" name="dateOfDeath" [(ngModel)]="user.deathDate" required>
+                <span ng-show="myForm.dateOfDeath.$error.required" class="help-block">date of death is required</span>        
             </div>
             <div class="form-group">
                 <label for="causeOfDeathInput" class="form-label">{{causeOfDeath}}</label>
-                    <input type="text" class="form-control" name="causeOfDeath" placeholder="banned, delete it myself, etc." [(ngModel)]="user.cause">
+                    <input type="text" class="form-control" name="causeOfDeath" placeholder="banned, delete it myself, etc." [(ngModel)]="user.cause" required>
+                <span ng-show="myForm.causeOfDeath.$error.required" class="help-block">cause of death is required</span>        
             </div>
             <div class="form-group">
                 <label for="obituaryInput" class="form-label">{{obituary}}</label>
-                    <textarea class="form-control" name="obituary" rows="5" [(ngModel)]="user.obituary" placeholder="Why did you register it in the first place?&#013;Which period of your life did it witness?&#013;One most memorable event it carried?&#013;What triggered its death?"></textarea>
+                    <textarea class="form-control" name="obituary" rows="5" [(ngModel)]="user.obituary" required placeholder="Why did you register it in the first place?&#013;Which period of your life did it witness?&#013;One most memorable event it carried?&#013;What triggered its death?"></textarea>
+                <span ng-show="myForm.obituary.$error.required" class="help-block">obituary is required</span>        
             </div>
-        <a class="submit_btn" routerLink="/submitform" (click)="onSubmit(myForm)">{{submit}}</a>
+        <button type = "submit" class="submit_btn" ng-disabled="myForm.$invalid">{{submit}}</button>
     </form>
     </div>
     <div class="s_text">
