@@ -141,7 +141,7 @@ export class SubmitformComponent implements OnInit {
       Host: "smtp.elasticemail.com",
       Username: "szsz19970408@gmail.com",
       Password: "B01D4195486B50839886403D9A3416A1A61F",
-      To: "qzhu5@saic.edu",
+      To: "zuukiozuukio@gmail.com",
       From: "szsz19970408@gmail.com",
       Subject: "New Obituary Submission",
       Body: "useremail: " + this.useremail + "\ncontent: " + content,
